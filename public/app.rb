@@ -4,7 +4,7 @@ require 'bcrypt'
 require 'json'
 require 'sinatra/base'
 require 'sinatra/flash'
-require './app/models/data_mapper_setup'
+require './public/models/data_mapper_setup.rb'
 require_relative './models/user'
 require_relative './models/rental'
 
@@ -55,7 +55,7 @@ class MakersBnB < Sinatra::Base
       session[:email] = params[:email]
       redirect '/welcome'
     else
-      flash.now[:error] = 'Email and Password does not match' 
+      flash.now[:error] = 'Email and Password does not match'
       erb :landing
     end
   end

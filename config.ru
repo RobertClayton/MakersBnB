@@ -1,2 +1,2 @@
-require_relative './app/app.rb'
+require_relative './public/app.rb'
 run MakersBnB
